@@ -1,0 +1,25 @@
+<link href="/assets/polymer/polymer.html" rel="import" />
+<polymer-element name="my-post">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+
+    <h2>List of all Post | <a>New Post</a></h2>
+    <ul class="navigation">
+      <li><a href="/">Home</a></li>
+      <li><a href="/">Contacts</a></li>
+      <li><a href="/">Blog</a></li>
+      <li><a href="/">Twitter</a></li>
+      <li><a href="/">Facebook</a></li>
+    </ul>
+  </template>
+
+  <script type="text/javascript">
+    Polymer('my-post', {
+      ready: function() { }
+    });
+  </script>
+</polymer-element>

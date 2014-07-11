@@ -1,0 +1,138 @@
+// Place all the styles related to the post controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+h2 {
+	text-align: center;
+}
+
+.header {
+	background: none repeat scroll 0 0 #1f8dd6;
+	padding: 8% 1%;
+
+	h2 {
+		color: #fff;
+		border: 3px solid #ddd;
+		padding: 1%;
+		border-radius: 3px;
+	}	
+}
+
+.nav-bar {
+	.navigation {
+		list-style: none;
+		margin: 20px 5% 0;
+		background: #fff;
+	}
+
+	.navigation li {
+		display: inline-block;
+	}
+
+	.navigation li {
+		display: inline-block;
+		font-size: 12px;
+		padding: 15px 25px 13px 25px;
+		color: #777;
+		text-transform: uppercase;
+		text-decoration: none;
+		background: #fff;
+		border-radius: 5px;
+		transition: background .4s ease;
+	}
+
+	.navigation li:hover {
+		background: rgb(128, 88, 165);
+		border-radius: 5px;
+		color: #fff;
+	}
+}
+
+input {
+	display: block;
+}
+
+input[type="text"] {
+	  border: 1px solid #ddd !important;
+    font-size: 21px;
+    padding: 1px 5px;
+    width: 100% !important;
+}
+
+input[type="text"]:focus {
+	border: 1px solid #1f8dd6 !important;
+}
+
+textarea {
+	  font-size: 16px;
+    resize: none;
+    width: 100%;
+}
+
+input[type="submit"] {
+	margin-top: 20px;
+	background: #4d85d1;
+	color: #fff;
+	width: 100%;
+}
+
+input[type="submit"]:hover {
+	background: #0A6DF5;
+	color: #fff;
+}
+
+#post {
+	.box-holder {
+		.box {
+			.box-nav {
+				float: right;
+				margin-bottom: -50px;
+
+				p {
+					margin: 0px;
+					display: inline-block;
+					padding: 3px 10px;
+					color: #fff;
+				}
+
+				.edit {
+					background: #4d85d1;
+				}
+
+				.delete {
+					background: #5aba59;
+				}
+			}
+
+			.box-content {
+				.title {
+					border-bottom: 1px solid #ddd;
+					color: #333;
+					font-family: sans-serif;
+			    font-size: 2em;
+			    padding-bottom: 10px; 
+				}
+
+				.box-inner {
+					border-bottom: 1px dashed #ddd;
+    			margin-bottom: 50px;
+    			padding: 10px;
+
+					.permalink {
+						color: #5eb95e;
+						font-size: 16px;
+					}
+
+					.content {
+
+					}
+				}
+
+				p, h4 {
+					display: block;
+					width: 100%;
+				}
+			}
+		}
+	}
+}

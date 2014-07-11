@@ -1,0 +1,70 @@
+
+<div id="post">
+	<div class="header">
+		<h2 class="container">My Blog Project</h2>
+	</div>
+
+	<div class="nav-bar">
+		<ul class="navigation">
+		  <li class="home"><span>Home</span></li>
+		  <li class="new-post"><span>New Post</span></li>
+		  <li class="users"><span>Users</span></li>
+		</ul>
+	</div>
+
+	<div class="container">
+		<ul class="box-holder clearfix"></ul>
+	</div>
+	<script type="text/template" id="post-add-form">
+		<div class="container">
+			<h3>Add Post</h3>
+			<%= form_tag( {}, multipart: true) do %>
+			  	<label for="Title">Title</label>
+		  		<input type="text" class="title" name="title"/>
+			  	<label for="permalink">Permalink</label>
+				<input type="text" class="permalink" name="permalink"/>
+				<label for="content">Content</label>
+				<textarea class="content" name="content"></textarea>
+				<%= file_field( "form", "file" ) %>
+				<%= submit_tag("Submit") %>
+			<% end %>
+		<div>
+	</script>
+
+	<script type="text/template" id="post-edit-form">
+		<div class="container">
+			<h3>Edit Post: <span class="title"></span></h3>
+			<%= form_tag( {}, multipart: true) do %>
+			  	<label for="Title">Title</label>
+		  		<input type="text" class="title" name="title"/>
+			  	<label for="permalink">Permalink</label>
+				<input type="text" class="permalink" name="permalink"/>
+				<label for="content">Content</label>
+				<textarea class="content" name="content"></textarea>
+				<%= file_field( "form", "file" ) %>
+				<%= submit_tag("Submit") %>
+			<% end %>
+		<div>
+	</script>
+	
+	<script type="text/template" id="post-item">
+		<div class="box">
+			<div class="box-nav clearfix">
+				<p class="edit"><a href="#" class="edit"></a></p>
+				<p class="delete"><a href="#" class="delete"></a></p>
+			</div>
+			<div class="box-content clearfix">
+				<h4 class="title"></h4>
+				<div class="box-inner clearfix">
+					<div>
+						<p>permalink: <span class="permalink"></span></p>
+					</div>
+					<p class="content"></p>
+				</div>
+			</div>	
+		</div>
+	</script>
+	
+	<div data-target-template="Blog-Views-Post-Add-Form"></div>
+	<div data-target-template="Blog-Views-Post-Edit-Form"></div>
+</div>
