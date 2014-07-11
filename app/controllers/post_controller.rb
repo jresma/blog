@@ -1,6 +1,6 @@
 class PostController < ApplicationController
   def index
-  	render json: Posts.includes(:files).all
+  render json: Posts.includes(:files).as_json(include: :files)
   end
 
   def create
